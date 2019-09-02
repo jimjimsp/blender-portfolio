@@ -1,0 +1,71 @@
+@import "menu";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: auto;
+  width: 80vw;
+  height: 100px;
+}
+
+.element {
+  &-wrapper {
+    margin: 20px;
+    margin-bottom: 0;
+    height: 200px;
+    width: 288px;
+    float: left;
+    cursor: pointer;
+  }
+  &-title {
+    margin: 0px;
+    margin-bottom: 5px;
+    font-weight: 100px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  &-image {
+    height: 162px;
+    width: 288px;
+    border-radius: 6px;
+  }
+}
+
+.viewer {
+  &-wrapper {
+    position: fixed;
+    z-index: 10;
+    background-color: rgba($color: #000000, $alpha: 0.85);
+    height: 100vh;
+    width: 100vw;
+    cursor: pointer;
+  }
+
+  &-title {
+    position: relative;
+    text-align: center;
+    margin: 10px auto 15px auto;
+    letter-spacing: 2px;
+  }
+
+  &-image {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 540px;
+    width: 960px;
+    border-radius: 6px;
+  }
+}

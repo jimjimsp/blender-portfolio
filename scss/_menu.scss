@@ -1,0 +1,125 @@
+@mixin easeOut {
+  transition: all 0.3s ease-out;
+}
+
+.menu-btn {
+  position: fixed;
+  z-index: 6;
+  right: 31px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    width: 18px;
+    height: 2px;
+    margin: 0 0 4px 0;
+    background: white;
+    @include easeOut;
+  }
+
+  // Rotate into X with menu Lines
+  &.open {
+    transform: rotate(180deg);
+
+    .btn-line {
+      background: white;
+
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 8px);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translate(-3.5px, 4px);
+      }
+      &:nth-child(3) {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.menu {
+  &-wrapper {
+    background-color: black;
+    position: fixed;
+    z-index: 6;
+    right: 26px;
+    top: 28px;
+    width: 28px;
+    height: 28px;
+    @include easeOut;
+    overflow: hidden;
+    border: 1px solid white;
+    font-family: "Avenir Book", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+
+    &.open {
+      width: 350px;
+      height: 350px;
+      right: -125px;
+      top: -125px;
+    }
+  }
+
+  &-item {
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    @include easeOut;
+
+    &:hover {
+      color: grey;
+    }
+
+    &:visited {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: grey;
+      }
+    }
+    &._home {
+      top: 10px;
+      left: -100px;
+      &.open {
+        transform: translate3d(150px, 150px, 150px);
+      }
+    }
+
+    &._strengths {
+      top: 40px;
+      left: -100px;
+
+      &.open {
+        transform: translate3d(150px, 150px, 150px);
+      }
+    }
+
+    &._work {
+      top: 70px;
+      left: -100px;
+      &.open {
+        transform: translate3d(150px, 150px, 150px);
+      }
+    }
+
+    &._about {
+      top: 100px;
+      left: -100px;
+      &.open {
+        transform: translate3d(150px, 150px, 150px);
+      }
+    }
+  }
+}
+
+#strengths {
+  position: relative;
+  top: 100px;
+}
+
+#projects {
+  position: relative;
+  top: -100px;
+}
