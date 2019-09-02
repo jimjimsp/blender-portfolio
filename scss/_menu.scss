@@ -79,7 +79,7 @@
         color: grey;
       }
     }
-    &._home {
+    &.threed {
       top: 10px;
       left: -100px;
       &.open {
@@ -87,7 +87,7 @@
       }
     }
 
-    &._strengths {
+    &.drawings {
       top: 40px;
       left: -100px;
 
@@ -96,16 +96,18 @@
       }
     }
 
-    &._work {
-      top: 70px;
+    &.youtube {
+      text-decoration: none;
+      top: 90px;
       left: -100px;
       &.open {
         transform: translate3d(150px, 150px, 150px);
       }
     }
 
-    &._about {
-      top: 100px;
+    &.contact {
+      text-decoration: none;
+      top: 120px;
       left: -100px;
       &.open {
         transform: translate3d(150px, 150px, 150px);

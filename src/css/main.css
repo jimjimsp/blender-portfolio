@@ -54,25 +54,27 @@
     color: white; }
     .menu-item:visited:hover {
       color: grey; }
-  .menu-item._home {
+  .menu-item.threed {
     top: 10px;
     left: -100px; }
-    .menu-item._home.open {
+    .menu-item.threed.open {
       transform: translate3d(150px, 150px, 150px); }
-  .menu-item._strengths {
+  .menu-item.drawings {
     top: 40px;
     left: -100px; }
-    .menu-item._strengths.open {
+    .menu-item.drawings.open {
       transform: translate3d(150px, 150px, 150px); }
-  .menu-item._work {
-    top: 70px;
+  .menu-item.youtube {
+    text-decoration: none;
+    top: 90px;
     left: -100px; }
-    .menu-item._work.open {
+    .menu-item.youtube.open {
       transform: translate3d(150px, 150px, 150px); }
-  .menu-item._about {
-    top: 100px;
+  .menu-item.contact {
+    text-decoration: none;
+    top: 120px;
     left: -100px; }
-    .menu-item._about.open {
+    .menu-item.contact.open {
       transform: translate3d(150px, 150px, 150px); }
 
 #strengths {
@@ -87,57 +89,63 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Courier New", Courier, monospace;
   color: white;
-  background-color: black;
+  background-color: #070907;
   margin: 0;
   padding: 0; }
 
+header {
+  position: fixed; }
+
+h1 {
+  position: fixed;
+  top: 0;
+  margin: 20px, 0, 10px, 30px;
+  font-family: "Avenir Book", Helvetica, Arial, sans-serif;
+  transform: scale(1, 1.4);
+  font-weight: 100;
+  font-size: 1.8rem;
+  cursor: default;
+  background-color: black; }
+
 .wrapper {
   margin: auto;
+  margin-top: 80px;
   width: 80vw;
-  height: 100px; }
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  transition: all 0.3s ease-out; }
 
 .element-wrapper {
-  margin: 20px;
-  margin-bottom: 0;
-  height: 200px;
+  margin-bottom: 3vw;
+  height: 162px;
   width: 288px;
   float: left;
   cursor: pointer; }
 
-.element-title {
-  margin: 0px;
-  margin-bottom: 5px;
-  font-weight: 100px;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  text-align: center; }
-
 .element-image {
   height: 162px;
-  width: 288px;
-  border-radius: 6px; }
+  width: 288px; }
+  .element-image:hover {
+    opacity: 0.05; }
 
 .viewer-wrapper {
   position: fixed;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.85);
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
-  cursor: pointer; }
-
-.viewer-title {
-  position: relative;
-  text-align: center;
-  margin: 10px auto 15px auto;
-  letter-spacing: 2px; }
+  cursor: pointer;
+  margin-top: -80px; }
 
 .viewer-image {
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 60px;
   height: 540px;
   width: 960px;
   border-radius: 6px; }
