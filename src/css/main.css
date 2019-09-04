@@ -18,7 +18,7 @@
       .menu-btn.open .btn-line:nth-child(1) {
         transform: rotate(45deg) translate(7px, 8px); }
       .menu-btn.open .btn-line:nth-child(2) {
-        transform: rotate(-45deg) translate(-3.5px, 4px); }
+        transform: rotate(-45deg) translate(-3px, 3px); }
       .menu-btn.open .btn-line:nth-child(3) {
         opacity: 0; }
 
@@ -54,15 +54,15 @@
     color: white; }
     .menu-item:visited:hover {
       color: grey; }
-  .menu-item.threed {
+  .menu-item.digital {
     top: 10px;
     left: -100px; }
-    .menu-item.threed.open {
+    .menu-item.digital.open {
       transform: translate3d(150px, 150px, 150px); }
-  .menu-item.drawings {
+  .menu-item.physical {
     top: 40px;
     left: -100px; }
-    .menu-item.drawings.open {
+    .menu-item.physical.open {
       transform: translate3d(150px, 150px, 150px); }
   .menu-item.youtube {
     text-decoration: none;
@@ -89,8 +89,8 @@
   box-sizing: border-box; }
 
 body {
-  color: white;
-  background-color: #070907;
+  color: whitesmoke;
+  background-color: whitesmoke;
   margin: 0;
   padding: 0; }
 
@@ -99,14 +99,17 @@ header {
 
 h1 {
   position: fixed;
+  width: 150px;
   top: 0;
   margin: 20px, 0, 10px, 30px;
+  padding: 3px;
   font-family: "Avenir Book", Helvetica, Arial, sans-serif;
-  transform: scale(1, 1.4);
+  font-size: 1rem;
   font-weight: 100;
-  font-size: 1.8rem;
+  letter-spacing: 1px;
   cursor: default;
-  background-color: black; }
+  background-color: black;
+  text-align: right; }
 
 .wrapper {
   margin: auto;
@@ -115,11 +118,11 @@ h1 {
   height: 100px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   transition: all 0.3s ease-out; }
 
 .element-wrapper {
-  margin-bottom: 3vw;
+  margin: 0.1vw;
   height: 162px;
   width: 288px;
   float: left;
@@ -129,7 +132,7 @@ h1 {
   height: 162px;
   width: 288px; }
   .element-image:hover {
-    opacity: 0.05; }
+    opacity: 0; }
 
 .viewer-wrapper {
   position: fixed;
@@ -147,5 +150,4 @@ h1 {
   margin-right: auto;
   margin-top: 60px;
   height: 540px;
-  width: 960px;
-  border-radius: 6px; }
+  width: 960px; }

@@ -22,25 +22,29 @@ class Menu extends React.Component {
         </div>
 
         <p
-          onClick={this.onChangeView3D.bind(this)}
-          className={"menu-item threed " + this.state.menu_close}
+          onClick={this.onChangeViewDigital.bind(this)}
+          className={"menu-item digital " + this.state.menu_close}
         >
-          3D
+          digital
         </p>
         <p
-          onClick={this.onChangeViewDraw.bind(this)}
-          className={"menu-item drawings " + this.state.menu_close}
+          onClick={this.onChangeViewPhysical.bind(this)}
+          className={"menu-item physical " + this.state.menu_close}
         >
-          drawings
+          physical
         </p>
         <a
           href="https://www.youtube.com/channel/UCqacqnaqgCbyH4nWm1WvkNA"
+          target="_blank"
+          rel="noopener noreferrer"
           className={"menu-item youtube " + this.state.menu_close}
         >
           youtube
         </a>
         <a
           href="mailto:jim.skogpirinen@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className={"menu-item contact " + this.state.menu_close}
         >
           contact
@@ -57,12 +61,12 @@ class Menu extends React.Component {
     }
   }
 
-  onChangeView3D() {
-    this.props.changeView("3d");
+  onChangeViewDigital() {
+    this.props.changeView("digital");
   }
 
-  onChangeViewDraw() {
-    this.props.changeView("draw");
+  onChangeViewPhysical() {
+    this.props.changeView("physical");
   }
 }
 
